@@ -14,6 +14,7 @@ for i, data in enumerate(iris.data):
 
 random.shuffle(dataArray) # Randomize dataset
 
+
 trainData = dataArray[0:105] # 70%=train data
 testData = dataArray[105:150] # 30%=test data
 
@@ -26,9 +27,20 @@ class HardCoded:
 		return
 
 	def predict(self, data):
-		for dataPoint in data:
+		predictions = []
+		correctPrediction = 0.0
+		for i, dataPoint in enumerate(data):
 			#runMachineLearningAlgorithm(dataPoint)
-			print dataPoint[1]
+			predictedNumber = 1
+			predictions.append(predictedNumber)
+
+			if predictions[i] == dataPoint[1]:
+				correctPrediction += 1
+		predictPercent = ((correctPrediction/len(data)*100))
+		print "Method Percentage = " + str(predictPercent) + "%"
+
+
+
 		
 
 hardCoded = HardCoded()

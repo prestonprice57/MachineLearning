@@ -1,24 +1,37 @@
 from sklearn import datasets
+from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 import random
 
-iris = datasets.load_iris() # Load dataset
+iris = datasets.load_iris()
 
-dataArray = [] # index 0=data 1=target
+iris_x = iris.data
+iris_y = iris.target
 
-# Load data into array
-for i, data in enumerate(iris.data):
-	target = i/50
-	array = [data, target]
-	dataArray.append(array)
+np.random.seed(10)
+indices = np.random.permutation(len(iris_x))
 
-random.shuffle(dataArray) # Randomize dataset
+iris_x_train = iris_x[indices[:105]]
+iris_y_train = iris_y[indices[:105]]
+iris_x_test = iris_x[indices[105:]]
+iris_y_test = iris_y[indices[105:]]
 
-trainData = dataArray[:105] # 70%=train data
-testData = dataArray[105:] # 30%=test data
+knn = KNeighborsClassifier()
 
-trainDataNP = np.array(trainData)
-testDataNP = np.array(testData)
+knn.fit(iris_x_train, iris_y_train)
+
+prediction = knn.predict(iris_x_test)
+
+
+correctPrediction = 0.0
+for index in range(len(prediction)):
+	if prediction[index] == iris_y_test[index]:
+		correctPrediction+=1
+
+
+print "Percentage: ", (100*correctPrediction/len(prediction))
+print "Correct Predictions: ", correctPrediction
+print "Total Predictions: ", len(prediction)
 
 class HardCoded:
 
@@ -26,11 +39,15 @@ class HardCoded:
 		return
 
 	def predict(self, data):
-		for dataPoint in data:
-			#runMachineLearningAlgorithm(dataPoint)
-			print dataPoint[1]
+		#nbrs = NearestNeighbors(n_neighbors=2, algorithm='ball_tree').fit(trainData)
+		#distances, indices = nbrs.kneighbors(trainData)
+		#print distances
+		#print indices
+		return
+
+
+
 		
 
 hardCoded = HardCoded()
-hardCoded.train(trainDataNP)
-hardCoded.predict(testDataNP)
+
