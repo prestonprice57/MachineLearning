@@ -2,28 +2,23 @@ from sklearn import datasets
 import numpy as np
 import random
 
-iris = datasets.load_iris() # Load dataset
+iris = datasets.load_iris()
 
-dataArray = [] # index 0=data 1=target
+iris_x = iris.data
+iris_y = iris.target
 
-# Load data into array
-for i, data in enumerate(iris.data):
-	target = i/50
-	array = [data, target]
-	dataArray.append(array)
+# np.random.seed(5) uncomment this to seed random 
+# generator and obtain constant random results
+indices = np.random.permutation(len(iris_x))
 
-random.shuffle(dataArray) # Randomize dataset
-
-
-trainData = dataArray[0:105] # 70%=train data
-testData = dataArray[105:150] # 30%=test data
-
-trainDataNP = np.array(trainData)
-testDataNP = np.array(testData)
+iris_x_train = iris_x[indices[:105]]
+iris_y_train = iris_y[indices[:105]]
+iris_x_test = iris_x[indices[105:]]
+iris_y_test = iris_y[indices[105:]]
 
 class HardCoded:
 
-	def train(self, data):
+	def train(self, data, figure):
 		return
 
 	def predict(self, data):
@@ -34,15 +29,14 @@ class HardCoded:
 			predictedNumber = 1
 			predictions.append(predictedNumber)
 
-			if predictions[i] == dataPoint[1]:
+			if predictions[i] == dataPoint:
 				correctPrediction += 1
 		predictPercent = ((correctPrediction/len(data)*100))
 		print "Method Percentage = " + str(predictPercent) + "%"
 
 
 
-		
 
 hardCoded = HardCoded()
-hardCoded.train(trainDataNP)
-hardCoded.predict(testDataNP)
+hardCoded.train(iris_x_train, iris_y_train)
+hardCoded.predict(iris_y_test)
