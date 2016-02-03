@@ -97,11 +97,11 @@ for r in reader:
 #np.random.seed(10)
 indices2 = np.random.permutation(len(cars_x))
 
-cars_x_train = cars_x_np[indices2[:1500]]
-cars_y_train = cars_y_np[indices2[:1500]]
-cars_x_test = cars_x_np[indices2[1500:]]
-cars_y_test = cars_y_np[indices2[1500:]]
-
+cars_x_train = cars_x_np[indices2[:1209]]
+cars_y_train = cars_y_np[indices2[:1209]]
+cars_x_test = cars_x_np[indices2[1209:]]
+cars_y_test = cars_y_np[indices2[1209:]]
+print len(cars_x)
 
 class kNNAlgorithm:
 
@@ -234,7 +234,7 @@ knn.checkTestData(iris_y_test)
 print("\n\nMy algorithm - Car data")
 knn2 = kNNAlgorithm()
 knn2.train(cars_x_train, cars_y_train)
-knn2.predict(cars_x_test, 8)
+knn2.predictWithZScore(cars_x_test, 50)
 knn2.checkTestData(cars_y_test)
 
 

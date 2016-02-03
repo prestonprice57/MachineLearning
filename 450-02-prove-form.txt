@@ -1,22 +1,23 @@
 When your assignment is complete, please answer the questions in this text file and upload it to I-Learn.
 
 1. Please provide the URL of your public GitHub repository.
-
+https://github.com/prestonprice57/MachineLearning/blob/master/kNearestNeighbors.py
 
 2. Briefly describe your overall approach to the task and highlight the most difficult part of this assignment.
-
+I wrote a kNN class that has a train and predict method inside of it to handle the algorithm.
 
 3. Briefly describe how you handled the distance between nominal attributes.
-
+To calculate the distance I used the Euclidean distance formula.
 
 4. Briefly describe your process for handling numeric data on different scales (i.e., normalizing).
-
+I wrote a z-score algorithm with my kNN algorithm but I also have another predict method that doesn't
+use the z-score. I tested those and it seemed that the z-score algorithm was better consistently.
 
 5. Describe your results for the Iris data set. (For example, what level of accuracy did you see for different values of K? How did your implementation compare to existing implementations?)
-
+I usually got between 90%-100% on my data set. Typically my algorithm performed as well as other implementations, however my algorithm was outperformed sometimes. When my k was very high the results were not very good but between about 5 and 9 k was fairly consistent.
 
 6. Describe your results for the Car data set. (For example, what level of accuracy did you see for different values of K? How did your implementation compare to existing implementations?)
-
+The car data set was much larger than the iris data set, so I was able to use larger values for k. I found that there was not much difference between k=10 and k=50 which was surprising. Once k was really large (i.e. 200) the accuracy started to suffer. This algorithm also performed well compared to other algorithms and even outperformed them at times. The average accuracy was from 85%-95%
 
 7. Describe anything you did to go above and beyond the minimum standard requirements.
 
@@ -28,6 +29,8 @@ C - Slightly deficient, but still mostly adequate
 D - Meets requirements
 E - Shows creativity and excels above and beyond requirements
 
+D
+
 
 9. Provide a brief justification (1-2 sentences) for selecting that category.
-
+I met all the requirements and did extensive testing but the extra requirements I planned on doing I ended up not doing.
