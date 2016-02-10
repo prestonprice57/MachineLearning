@@ -1,0 +1,102 @@
+When your assignment is complete, please answer the questions in this text file and upload it to I-Learn.
+
+
+1. Please provide a link to your classifier in your public GitHub repo.
+https://github.com/prestonprice57/MachineLearning/blob/master/decisionTree.py
+
+2. Briefly describe your overall approach to the task and highlight the most difficult part of this assignment.
+Basically I implemented the ID3 algorithm using a dictionary to store my tree. The hardest part was creating the tree recursively.
+
+3. Briefly describe how you handled numeric data.
+I binned numerical data before the algorithm was implemented. 
+
+4. Briefly describe your you handled missing data.
+If there was no leaf node, I simply found the most common item in the dataset and guessed that one.
+
+5. Describe your results for the Iris data set. (e.g., What was the size of the tree? How did your implementation compare to existing implementations? How did your decision tree compare to your kNN classifier)
+The size of the tree was relatively small, as the data was separated pretty evenly. My accuracy was around 85%-95%.
+
+6. Include a textual representation of the tree your algorithm produced for the iris dataset.
+{2: 
+	{1.0: 0, 
+	2.0: 0, 
+	4.0: 1, 
+	5.0: 1, 
+	6.0: 1, 
+	7.0: 1, 
+	8.0: 
+	  {3: 
+		{8.0: 
+		  {0: 
+			{1.0: 1, 
+			3.0: 1, 
+			5.0: 2, 
+			6.0: 1}
+	  }, 9.0: 
+	         {1: 
+				{8.0: 1, 
+				 1.0: 2, 
+				 2.0: 1, 
+				 6.0: 1}
+	     	 }, 11.0: 2, 
+	        6.0: 1, 
+	        7.0: 0}
+	     }, 9.0: 2, 
+	        10.0: 2, 
+	        11.0: 2}
+}
+
+7. Describe your results for the Lenses data set. (e.g., What was the size of the tree? How did your implementation compare to existing implementations?)
+My lenses dataset hovered somewhere between 70 and 80%.
+
+8. Include a textual representation of the tree your algorithm produced for the Lenses dataset.
+{3: 
+   {'1': '3', 
+	'2': 
+		{2: 
+			{'1': 
+				{0: 
+				   {'1': '3', 
+				    '3': '3', 
+				    '2': 
+				   		{1: 
+				   			{'1': '3'
+				   			}}}}, 
+			'2': '3'}}}}
+
+9. Describe your results for the Voting data set. (e.g., What was the size of the tree? How did your implementation compare to existing implementations?)
+My votes data set was between 65 and 75%.
+
+10. Include ___a portion of___ the representation of the tree your algorithm produced for the Voting dataset.
+{3: 
+	{'y': 
+		{10: 
+			{'y': 
+				{2: 
+					{'y': 
+						{15: 
+							{'y': 
+								{7: 
+									{'y': 
+										{0: 
+											{'y': 
+												{4: 
+													{'y': 'republican', 
+													'n': 'republican'}
+												}, 
+											'n': 'republican'}
+										}, 
+									'n': 
+										{1: 
+											{'y': 'republican', 
+											 '?': 'republican', 
+											 'n': 'democrat'}}}}
+
+
+11. If applicable, please describe anything you did to go above and beyond and the results you saw.
+
+12. Please select the category you feel best describes your assignment:
+D - Meets requirements
+
+13. Provide a brief justification (1-2 sentences) for selecting that category.
+I was able to implement the algorithm for all the datasets.

@@ -239,6 +239,7 @@ print "Iris:"
 dTree = DecisionTree(iris_x_train, iris_target_train, iris_x_test, iris_target_test)
 dTree.buildTree()
 dTree.testPredict()
+print dTree.tree
 
 print "\nCars:"
 dTree2 = DecisionTree(cars_x_train, cars_target_train, cars_x_test, cars_target_test)
@@ -249,11 +250,12 @@ print "\nLenses"
 dTree3 = DecisionTree(lenses_x_train, lenses_target_train, lenses_x_test, lenses_target_test)
 dTree3.buildTree()
 dTree3.testPredict()
+print dTree3.tree
 
 print "\nVotes"
 dTree4 = DecisionTree(votes_x_train, votes_target_train, votes_x_test, votes_target_test)
 dTree4.buildTree()
 dTree4.testPredict()
-
+print dTree4.tree
 
 
