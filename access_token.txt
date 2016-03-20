@@ -1,0 +1,3 @@
+client_id = 'da4a3124488840f582305f64b3557548'
+client_secret = '56a3f91ce6674cd2a2acce47c003576d'
+access_token = '1147536024.da4a312.5a73ff922de64f0fa6a6486725d7b564'

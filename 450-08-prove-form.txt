@@ -1,0 +1,47 @@
+When your assignment is complete, please answer the questions in this text file and upload it to I-Learn.
+
+
+1. Please list the 5 rules you found with the highest support.
+
+	Yogurt => Whole Milk
+	Root Vegetables => Whole Milk
+	Root Vegetables => Other Vegetables
+	Tropical Fruit => Whole Milk
+	Whipped/Sour Cream => Whole Milk
+
+2. Please list the 5 rules you found with the highest confidence.
+
+	Citrus Fruit, Tropical Fruit, Root Vegetables, Whole Milk => Other Vegetables
+	Root Vegetables, Butter, Yogurt => Whole Milk
+	Citrus Fruit, Tropical Fruit, Root Vegetables => Other Vegetables
+	Root Vegetables, Other Vegetables, Brown Bread => Whole Milk
+	Onions, Butter => Whole Milk
+
+3. Please list the 5 rules you found with the highest lift.
+
+	Citrus Fruit, Tropical Fruit, Other Vegetables, Whole Milk => Root Vegetables
+	Tropical Fruit, Root Vegetables, Other Vegetables, Whole Milk => Citrus Fruit
+	Liquor => Bottled Beer
+	Citrus Fruit, Root Vegetables, Other Vegetables, Whole Milk => Tropical Fruit
+	Herbs, Whole Milk, => Root Vegetables
+
+4. Please list the 5 rules you found that you think are the most interesting.
+
+	Beef, Soda => Other Vegetables
+	Beef, Newspapers => Other Vegetables
+	Yogurt, Rolls/Buns, Bottled Water => Soda
+	Sausage, Chicken => Whole Milk
+	Whole Milk, Hygiene Articles => Other Vegetables
+
+5. Please describe anything else you did for this assignment
+
+	Nothing
+
+6. Please select the category you feel best describes your assignment:
+
+	D - Meets requirements
+
+
+7. Provide a brief justification (1-2 sentences) for selecting that category.
+
+	I did everything described in the assignment but not much extra.
